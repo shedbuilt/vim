@@ -1,5 +1,5 @@
 NAME=vim
 VERSION=8.0.586
-REVISION=2
+REVISION=1
 SRC=ftp://ftp.vim.org/pub/vim/unix/vim-8.0.586.tar.bz2
 SRCMD5=b35e794140c196ff59b492b56c1e73db
