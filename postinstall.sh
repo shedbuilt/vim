@@ -1,5 +1,4 @@
 #!/bin/bash
 if [ ! -e /etc/vimrc ]; then
-    install -v -m644 /etc/vimrc.default /etc/vimrc
+    ln -sv /usr/share/defaults/etc/vimrc /etc/vimrc
 fi
-touch ~/.vimrc
