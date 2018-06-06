@@ -6,7 +6,7 @@ echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h &&
 ./configure --prefix=/usr &&
 make -j $SHED_NUM_JOBS &&
 make DESTDIR="$SHED_FAKE_ROOT" install &&
-install -v -Dm644 "${SHED_PKG_CONTRIB_DIR}/vimrc" "${SHED_FAKE_ROOT}/usr/share/defaults/etc/vimrc" &&
+install -v -Dm644 "${SHED_PKG_CONTRIB_DIR}/vimrc" "${SHED_FAKE_ROOT}${SHED_PKG_DEFAULTS_INSTALL_DIR}/etc/vimrc" &&
 ln -sv vim "${SHED_FAKE_ROOT}/usr/bin/vi" || exit 1
 for L in "${SHED_FAKE_ROOT}"/usr/share/man/{,*/}man1/vim.1; do
     ln -sv vim.1 $(dirname $L)/vi.1 || exit 1
